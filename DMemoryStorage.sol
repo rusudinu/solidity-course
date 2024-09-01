@@ -37,16 +37,4 @@ contract DmemoryStorage {
             sum += newNumbers[i];  // Summing up elements, but 'newNumbers' is temporary and will be discarded after execution
         }
     }
-
-    // 6. Function to demonstrate Storage for Function Inputs (not typical, but possible)
-    function addNumberStorage(uint256[] storage newNumbers) internal view returns (uint256 sum) {
-        for (uint256 i = 0; i < newNumbers.length; i++) {
-            sum += newNumbers[i];  // Summing up elements directly from storage
-        }
-    }
-
-    // Public function to use the storage input function
-    function sumStoredNumbers() public view returns (uint256) {
-        return addNumberStorage(numbers);  // Directly sums elements in the 'numbers' array from storage
-    }
 }
